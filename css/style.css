@@ -1,4 +1,18 @@
+.accordion-button {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #007bff;
+}
 
+.accordion-body {
+    background-color: #e9ecef;
+    border-radius: 0.25rem;
+}
+
+.accordion-item {
+    border: 1px solid #007bff;
+    border-radius: 0.25rem;
+}
 
 .signup {
     background-color: rgb(87, 53, 255);

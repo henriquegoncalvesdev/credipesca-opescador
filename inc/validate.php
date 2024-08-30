@@ -28,7 +28,7 @@ if ($count == 1) {
 	setcookie('lastname', $lname, time() + 1 * 60, '/');
 
     
-    header('Location: ../display-person.php');
+    header('Location: ../display-user.php');
 } else {
     echo 'Invalid Login';
 }
