@@ -74,13 +74,66 @@ if (!$client) {
 <div class="container mt-5">
     <h2>Atualizar Cliente</h2>
     <form method="post">
-        <!-- Form fields as before -->
-        <!-- Example field -->
         <div class="mb-3">
             <label for="fName" class="form-label">Nome</label>
-            <input type="text" class="form-control" id="fName" name="fName" value="<?= htmlspecialchars($client['fName']) ?>" required>
+            <input type="text" class="form-control" id="fName" name="fName" value="<?= htmlspecialchars($client['fName']) ?>">
         </div>
-        <!-- Repeat for other fields -->
+        <div class="mb-3">
+            <label for="lName" class="form-label">Sobrenome</label>
+            <input type="text" class="form-control" id="lName" name="lName" value="<?= htmlspecialchars($client['lName']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="email" value="<?= htmlspecialchars($client['email']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="telNumber" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="telNumber" name="telNumber" value="<?= htmlspecialchars($client['telNumber']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Endereço</label>
+            <input type="text" class="form-control" id="address" name="address" value="<?= htmlspecialchars($client['address']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="cpf" class="form-label">CPF</label>
+            <input type="text" class="form-control" id="cpf" name="cpf" value="<?= htmlspecialchars($client['cpf']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="rg" class="form-label">RG</label>
+            <input type="text" class="form-control" id="rg" name="rg" value="<?= htmlspecialchars($client['rg']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="dob" class="form-label">Data de Nascimento</label>
+            <input type="date" class="form-control" id="dob" name="dob" value="<?= htmlspecialchars($client['dob']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="certificado" class="form-label">Certificado Rg. Arm.</label>
+            <input type="text" class="form-control" id="certificado" name="certificado" value="<?= htmlspecialchars($client['certificado']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="estadoCivil" class="form-label">Estado Civil</label>
+            <input type="text" class="form-control" id="estadoCivil" name="estadoCivil" value="<?= htmlspecialchars($client['estadoCivil']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="empresa" class="form-label">Empresas</label>
+            <input type="text" class="form-control" id="empresa" name="empresa" value="<?= htmlspecialchars($client['empresa']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="modalidade" class="form-label">Modalidade</label>
+            <input type="text" class="form-control" id="modalidade" name="modalidade" value="<?= htmlspecialchars($client['modalidade']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="produtos" class="form-label">Produtos</label>
+            <input type="text" class="form-control" id="produtos" name="produtos" value="<?= htmlspecialchars($client['produtos']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="embarcacoes" class="form-label">Embarcações</label>
+            <input type="text" class="form-control" id="embarcacoes" name="embarcacoes" value="<?= htmlspecialchars($client['embarcacoes']) ?>">
+        </div>
+        <div class="mb-3">
+            <label for="despachante" class="form-label">Despachante</label>
+            <input type="text" class="form-control" id="despachante" name="despachante" value="<?= htmlspecialchars($client['despachante']) ?>">
+        </div>
         <button type="submit" class="btn btn-primary">Atualizar</button>
     </form>
 </div>
