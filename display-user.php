@@ -3,15 +3,14 @@ session_start();
 require './inc/header.php';
 require './inc/database.php';
 
-// check for authentication before showing data 
+// Verificação de autenticação antes de mostrar os dados
 if (!isset($_SESSION['user_id']) || (time() > $_SESSION['timeout'])) {
     session_unset(); 
     session_destroy();
     header('location: login.php');
 }
 
-
-// Display the records in the database table
+// Exibir os registros na tabela do banco de dados
 $sql = "SELECT * FROM phpdata";
 $result = $conn->query($sql);
 
@@ -45,8 +44,14 @@ foreach ($result as $row) {
     echo '<p><strong>Produtos:</strong> ' . htmlspecialchars($row['produtos']) . '</p>';
     echo '<p><strong>Embarcações:</strong> ' . htmlspecialchars($row['embarcacoes']) . '</p>';
     echo '<p><strong>Despachante:</strong> ' . htmlspecialchars($row['despachante']) . '</p>';
-    echo '<a href="listar_documentos.php?cliente_id=' . $cliente_id . '" class="btn btn-info me-2">Ver Documentos</a>'; // Adicionando espaçamento entre botões
-    echo '<a href="upload_documento.php?cliente_id=' . $cliente_id . '" class="btn btn-primary">Upload Documento</a>';
+    
+    echo '<a href="listar_documentos.php?cliente_id=' . $cliente_id . '" class="btn btn-info me-2">Ver Documentos</a>'; // Ver documentos
+    echo '<a href="upload_documento.php?cliente_id=' . $cliente_id . '" class="btn btn-primary me-2">Upload Documento</a>'; // Upload documento
+    
+    // Botões "Atualizar" e "Deletar"
+    echo '<a href="update_cliente.php?cliente_id=' . $cliente_id . '" class="btn btn-warning me-2">Atualizar</a>'; // Botão Atualizar
+    echo '<a href="delete_cliente.php?cliente_id=' . $cliente_id . '" class="btn btn-danger" onclick="return confirm(\'Tem certeza que deseja excluir este cliente?\')">Deletar</a>'; // Botão Deletar
+    
     echo '</div>';
     echo '</div>';
     echo '</div>';
